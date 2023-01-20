@@ -1,0 +1,249 @@
+.card-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-right: 80px;
+}
+
+.card-container:last-child {
+  margin-right: 0;
+}
+
+.card-container_disabled .card {
+  border: 4px solid #979797;
+  cursor: default;
+}
+
+.card-container_disabled .card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2;
+  opacity: 0.4;
+  z-index: 999;
+}
+
+.card-container_disabled .card:hover {
+  border: 4px solid #979797;
+}
+
+.card-container_disabled .card__border,
+.card-container_disabled .card__circle {
+  background-color: #979797;
+}
+
+.card-container_disabled .card:hover .card__border,
+.card-container_disabled .card:hover .card__circle {
+  background-color: #979797;
+}
+
+.card-container_disabled .card__text {
+  display: none;
+}
+
+.card-container_disabled .card__text_lack {
+  display: block;
+}
+
+.card-container_disabled .card_active .card__border,
+.card-container_disabled .card_active .card__circle {
+  background-color: #979797;
+}
+
+.card-container_disabled .card_active:hover .card__title {
+  display: block;
+}
+
+.card-container_disabled .card_active:hover .card__title_hover {
+  display: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 314px;
+  min-height: 480px;
+  clip-path: polygon(0 45px, 45px 0, 100% 0, 100% 100%, 0 100%);
+  background-color: #f2f2f2;
+  background-image: url("../../images/Photo.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  border: 4px solid rgba(46, 168, 230, 1);
+  border-radius: 10px;
+  font-family: "Trebuchet MS";
+  font-style: normal;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.card_active {
+  border: 4px solid #d91667;
+}
+
+.card_active .card__border,
+.card_active .card__circle {
+  background-color: #d91667;
+}
+
+.card:hover {
+  border: 4px solid #22a7e9;
+}
+
+.card:hover .card__border,
+.card:hover .card__circle {
+  background-color: #22a7e9;
+}
+
+.card_active:hover {
+  border: 4px solid #d91667;
+}
+
+.card_active:hover .card__border,
+.card_active:hover .card__circle {
+  background-color: #d91667;
+}
+
+.card_active:hover .card__title {
+  display: none;
+}
+
+.card_active:hover .card__title_hover {
+  display: block;
+}
+
+.card__border {
+  position: absolute;
+  top: -10px;
+  left: 15.8px;
+  background-color: rgba(46, 168, 230, 1);
+  width: 4px;
+  height: 63.2px;
+  transform: rotate(45deg);
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  margin: 21px 61px 33px 48px;
+}
+
+.card__title {
+  display: block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #666666;
+  margin: 0 0 20px 0;
+}
+
+.card__title_hover {
+  display: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #d91667;
+  margin: 0 0 20px 0;
+}
+
+.card__subtitle {
+  margin: 0;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 23px;
+  color: #000000;
+  margin-bottom: 2px;
+}
+
+.card__subtitle_small {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.card__description {
+  max-width: 135px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #666666;
+  white-space: pre-line;
+}
+
+.card__circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0 16px 16px 0;
+  width: 83px;
+  height: 83px;
+  border-radius: 50%;
+  background-color: #1698d9;
+  text-align: center;
+}
+
+.card__weight {
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 15px;
+  color: #ffffff;
+  text-align: center;
+  margin: 20px 0 8px 0;
+}
+
+.card__weight_small {
+  font-size: 21px;
+  line-height: 22px;
+  margin: 0;
+}
+
+.card__text {
+  display: block;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+}
+
+.card__link {
+  text-decoration: none;
+  color: #1698d9;
+  border-bottom: 1px dashed #1698d9;
+  cursor: pointer;
+}
+
+.card__link:hover {
+  color: #22a7e9;
+  border-bottom: 1px dashed #22a7e9;
+}
+
+.card__text_lack {
+  display: none;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  color: #ffff66;
+  margin: 0;
+}
+
+@media screen and (max-width: 1190px) {
+  .card-container {
+    margin: 0 20px 40px 0;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .card-container {
+    margin: 0 0 40px 0;
+  }
+}

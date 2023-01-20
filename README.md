@@ -16,4 +16,4 @@
 
 ## Ссылка на Github Pages
 
-<a href='https://mariiagudkova.github.io/test_task_funbox/'>Ссылка</a>
+<a href='https://mariiagudkova.github.io/test_task_funbox/' target="_blank">Ссылка</a>

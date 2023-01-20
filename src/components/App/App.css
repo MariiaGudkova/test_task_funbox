@@ -1,0 +1,30 @@
+.content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: "Exo2.0", "Inter", "Arial", "Helvetica", sans-serif;
+}
+
+.content__header {
+  font-family: "Exo2.0", sans-serif;
+  font-size: 36px;
+  font-weight: lighter;
+  line-height: 44px;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0px 1px 1px #000000;
+  margin: 0 0 30px 0;
+  letter-spacing: 2px;
+}
+
+.cards {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
